@@ -1,7 +1,7 @@
 import pygame as pg
 
 class Button:
-    def __init__(self, x, y, height, width, text="", colour, hoverColour, textColour=(255, 255, 255), image=None):
+    def __init__(self, x, y, height, width, colour, hoverColour, text="",  textColour=(255, 255, 255), image=None):
         self.rect = pg.Rect(x, y, width, height)
         self.text = text
         self.colour = colour
@@ -20,7 +20,7 @@ class Button:
         if self.image is not None:
             surface.blit(self.image, self.rect.topleft)
             if isHovered:
-                highlight = pg.surface((self.rect.width, self.rect.height), pg.SRCALPHA)
+                highlight = pg.Surface((self.rect.width, self.rect.height), pg.SRCALPHA)
                 highlight.fill((255, 255, 255, 40))
                 surface.blit(highlight, self.rect.topleft)
 

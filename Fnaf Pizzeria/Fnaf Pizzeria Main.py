@@ -1,9 +1,9 @@
 import sys
 import pygame as pg
 #import random
-import Animatronics
+#import animatronics
+import sprites
 from manager import StateManager
-from states import MainMenu, Gameplay
 
 pg.init()
 
@@ -14,11 +14,15 @@ virtualScreen = pg.Surface((virtualWidth, virtualHeight))
 realScreen = pg.display.set_mode((virtualWidth, virtualHeight), pg.FULLSCREEN | pg.SCALED)
 realWidth, realHeight = realScreen.get_size()
 
+sprites.load_all_assets()
+from states import MainMenu, Gameplay, Shop
+
 clock = pg.time.Clock()
 
 all_screens = {
     "MainMenu": MainMenu(),
-    "Gameplay": Gameplay()
+    "Gameplay": Gameplay(),
+    "Shop": Shop()
 }
 
 manager = StateManager("MainMenu", all_screens)
