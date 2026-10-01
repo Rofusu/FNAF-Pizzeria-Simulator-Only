@@ -101,10 +101,10 @@ class Shop(BaseState):
         self.font = pg.font.SysFont(None, 40)
 
         self.lArrowButton = Button(
-            x=200, y=600, height=100, width=100, colour=None, hoverColour=None, image=images["l_arrow"]
+            x=500, y=525, height=100, width=100, colour=None, hoverColour=None, image=images["l_arrow"]
         )
         self.rArrowButton = Button(
-            x=800, y=600, height=100, width=100, colour=None, hoverColour=None, image=images["r_arrow"]
+            x=1080, y=525, height=100, width=100, colour=None, hoverColour=None, image=images["r_arrow"]
         )
 
     def handle_events(self, events):
@@ -124,7 +124,7 @@ class Shop(BaseState):
                     self.done = True
 
     def draw(self, screen):
-        screen.fill((100, 200, 200))
+        screen.fill((0, 100, 150))
         text = self.font.render("Shop", True, (255, 255, 255))
         screen.blit(text, (100, 250))
 
