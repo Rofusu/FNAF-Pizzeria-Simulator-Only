@@ -161,7 +161,7 @@ class Shop(BaseState):
         if self.currentAnimatronic.owned:
             #make sure they cant purchase it
             pass
-        elif playerCash >= self.currentAnimatronic.cost:
+        elif playerCash >= self.currentAnimatronic.cost and self.currentAnimatronic.available:
             playerCash -= self.currentAnimatronic.cost
             self.currentAnimatronic.owned = True
 
