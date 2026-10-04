@@ -1,3 +1,4 @@
+from matplotlib.animation import Animation
 from matplotlib.style import available
 
 from sprites import images
@@ -34,6 +35,12 @@ animatronic_dict = {
     ),
     "Toy Chica": Animatronic(
         name="Toy Chica", risk=1, entertainment=99, cost=10000, image=images["Toy Chica"], available=False
+    ),
+    "Raggy": Animatronic(
+        name="Raggy", risk=0, entertainment=1, cost=5, image=images["Raggy"]
+    ),
+    "Mr Toaster": Animatronic(
+        name="Mr Toaster", risk=2, entertainment=3, cost=50, image=images["Mr Toaster"]
     )
 }
 
